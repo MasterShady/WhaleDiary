@@ -181,7 +181,7 @@ class EditViewController: UIViewController, UIScrollViewDelegate,UIPopoverPresen
                 
         emptyView.isHidden = true
 
-        previewVC.htmlURL = URL(fileURLWithPath: file.path).deletingLastPathComponent().appendingPathComponent(".\(file.displayName).html")
+        previewVC.htmlURL = URL(fileURLWithPath: file.path).deletingLastPathComponent().appendingPathComponent("\(file.displayName).html")
             
         textVC.editView.file = file
         

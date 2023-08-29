@@ -19,11 +19,11 @@ enum SortOption: String {
     var displayName: String {
         switch self {
         case .type:
-            return /"SortByType"
+            return "SortByType"
         case .name:
-            return /"SortByName"
+            return "SortByName"
         case .modifyDate:
-            return /"SortByModifyDate"
+            return "SortByModifyDate"
         }
     }
     
@@ -47,11 +47,11 @@ enum DarkModeOption: String {
     var displayName: String {
         switch self {
         case .dark:
-            return /"KeepDarkMode"
+            return "KeepDarkMode"
         case .light:
-            return /"DisableDarkMode"
+            return "DisableDarkMode"
         case .system:
-            return /"FollowSystem"
+            return "FollowSystem"
         }
     }
     
@@ -71,11 +71,11 @@ enum ImageStorageOption: String {
     var displayName: String {
         switch self {
         case .local:
-            return /"ImageStorageLocal"
+            return "ImageStorageLocal"
         case .remote:
-            return /"ImageStorageRemote"
+            return "ImageStorageRemote"
         case .ask:
-            return /"ImageStorageAsk"
+            return "ImageStorageAsk"
         }
     }
 }
@@ -87,9 +87,9 @@ enum FileOpenOption: String {
     var displayName: String {
         switch self {
         case .edit:
-            return /"FileOpenOptionEdit"
+            return "FileOpenOptionEdit"
         case .preview:
-            return /"FileOpenOptionPreview"
+            return "FileOpenOptionPreview"
         }
     }
 }
@@ -167,12 +167,12 @@ class Configure: NSObject, NSCoding {
         let destStylePath = URL(fileURLWithPath: supportPath)
         try! Zip.unzipFile(Bundle.main.url(forResource: "Resources", withExtension: "zip")!, destination: destStylePath, overwrite: true, password: nil, progress: nil)
         
-        if let path = Bundle.main.path(forResource: /"Instructions", ofType: "md") {
-            let newPath = documentPath + "/" + /"Instructions" + ".md"
+        if let path = Bundle.main.path(forResource: "Instructions", ofType: "md") {
+            let newPath = documentPath + "/" + "Instructions" + ".md"
             try? FileManager.default.copyItem(atPath: path, toPath: newPath)
         }
         if let path = Bundle.main.path(forResource: /"Syntax", ofType: "md") {
-            let newPath = documentPath + "/" + /"Syntax" + ".md"
+            let newPath = documentPath + "/" + "Syntax" + ".md"
             try? FileManager.default.copyItem(atPath: path, toPath: newPath)
         }
         
@@ -193,15 +193,15 @@ class Configure: NSObject, NSCoding {
             try? FileManager.default.moveItem(atPath: fullPath, toPath: newPath)
         }
         
-        if let path = Bundle.main.path(forResource: /"Instructions", ofType: "md") {
-            let newPath = documentPath + "/" + /"Instructions" + ".md"
+        if let path = Bundle.main.path(forResource: "Instructions", ofType: "md") {
+            let newPath = documentPath + "/" + "Instructions" + ".md"
             if FileManager.default.fileExists(atPath: newPath) {
                 try? FileManager.default.removeItem(atPath: newPath)
                 try? FileManager.default.copyItem(atPath: path, toPath: newPath)
             }
         }
-        if let path = Bundle.main.path(forResource: /"Syntax", ofType: "md") {
-            let newPath = documentPath + "/" + /"Syntax" + ".md"
+        if let path = Bundle.main.path(forResource: "Syntax", ofType: "md") {
+            let newPath = documentPath + "/" + "Syntax" + ".md"
             if FileManager.default.fileExists(atPath: newPath) {
                 try? FileManager.default.removeItem(atPath: newPath)
                 try? FileManager.default.copyItem(atPath: path, toPath: newPath)

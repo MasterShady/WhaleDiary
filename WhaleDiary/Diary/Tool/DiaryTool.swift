@@ -50,6 +50,22 @@ class DiaryTool{
         }
     }
     
+    
+    func openAndEditFile(_ file:File){
+        File.current?.close()
+        print("file \(file.displayName) tap open")
+        ActivityIndicator.show()
+        file.open { success in
+            ActivityIndicator.dismiss()
+            if success {
+                self.editFile(file)
+            } else {
+                self.editFile(nil)
+                ActivityIndicator.showError(withStatus: "CanNotAccesseThisFile")
+            }
+        }
+    }
+    
     func editFile(_ file: File?) {
         if file == nil && (File.current == nil || isPad == false) {
             return
