@@ -59,6 +59,7 @@ class File {
         }
     }
     private(set) var modifyDate = Date()
+    private(set) var createDate = Date()
     private(set) var size = 0
     private(set) var disable = false
     private(set) var type = FileType.text
@@ -116,6 +117,31 @@ class File {
             }
         }
     }
+    
+    var imagePaths: [String]{
+        var imagePaths: [String] = []
+        guard let text = text else {return imagePaths}
+        
+        let pattern = #"\!\[.*?\]\((.*?)\)"#
+        
+        if let regex = try? NSRegularExpression(pattern: pattern, options: []) {
+            
+            
+            let matches = regex.matches(in: text, options: [], range: NSRange(location: 0, length: text.length))
+            
+            for match in matches {
+                if match.numberOfRanges > 1 {
+                    let range = match.range(at: 1)
+                    if range.location != NSNotFound {
+                        let imagePath = text.substring(with: range)
+                        imagePaths.append(imagePath)
+                    }
+                }
+            }
+        }
+        return imagePaths
+    }
+    
     
     var expand = false {
         didSet {
@@ -188,7 +214,7 @@ class File {
             }
         }
         
-        guard let url = self.url, let values = try? url.resourceValues(forKeys: [URLResourceKey.isDirectoryKey,.contentModificationDateKey,.fileSizeKey]) else {
+        guard let url = self.url, let values = try? url.resourceValues(forKeys: [URLResourceKey.isDirectoryKey,.creationDateKey,.contentModificationDateKey,.fileSizeKey]) else {
             disable = true
             return
         }
@@ -206,6 +232,9 @@ class File {
         } else {
             type = .other
         }
+        
+        //创建时间.
+        createDate = values.creationDate!
         
         guard type == .folder else {
             modifyDate = values.contentModificationDate ?? Date()

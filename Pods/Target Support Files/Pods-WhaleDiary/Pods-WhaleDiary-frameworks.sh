@@ -177,13 +177,14 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXPhotoBrowser/JXPhotoBrowser.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXSegmentedView/JXSegmentedView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/KDCalendar/KDCalendar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
@@ -198,13 +199,14 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXPhotoBrowser/JXPhotoBrowser.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXSegmentedView/JXSegmentedView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/KDCalendar/KDCalendar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"

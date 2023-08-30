@@ -7,31 +7,25 @@
 
 import Foundation
 
+
+let kLocalFileLoadCompleted = NotificationName(rawValue: "kLocalFileLoadCompleted")!
+
 class DiaryTool{
     static let shared = DiaryTool()
-    
-    
     init() {
         File.loadLocal { local in
             self.root = local
+            NotificationCenter.post(name: .localFileLoadCompleted, object: nil)
         }
     }
     
-    var diarys: [Diary] {
-        root.children.map { file in
-            let diary = Diary()
-            diary.title = file.name
-            diary.date = file.modifyDate
-            diary.file = file
-            return diary
-        }
+    var diarys: [File] {
+        root.children.filter { $0.type == .text }.sorted(by: \.createDate).reversed()
     }
     
     var root = File.local
     
-    func createDiary(){
-        let date = Date()
-        let name = date.dateString(withFormat: "YYYYMMddHHmmss")
+    func createDiary(withName name: String){
         guard let file = self.root.createFile(name: name , type: .text) else {
             return
         }

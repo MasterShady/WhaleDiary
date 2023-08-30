@@ -120,7 +120,8 @@ class Configure: NSObject, NSCoding {
     let autoHideNavigationBar = BehaviorRelay(value:true)
     
     var isPro: Bool {
-        return expireDate.isFuture
+        return true
+        //return expireDate.isFuture
     }
     
     override init() {
@@ -167,7 +168,7 @@ class Configure: NSObject, NSCoding {
         let destStylePath = URL(fileURLWithPath: supportPath)
         try! Zip.unzipFile(Bundle.main.url(forResource: "Resources", withExtension: "zip")!, destination: destStylePath, overwrite: true, password: nil, progress: nil)
         
-        if let path = Bundle.main.path(forResource: "Instructions", ofType: "md") {
+        if let path = Bundle.main.path(forResource: /"Instructions", ofType: "md") {
             let newPath = documentPath + "/" + "Instructions" + ".md"
             try? FileManager.default.copyItem(atPath: path, toPath: newPath)
         }
@@ -266,26 +267,26 @@ class Configure: NSObject, NSCoding {
 //            return
 //        #endif
 
-        IAP.validateReceipt(itunesSecret) { (statusCode, products, json) in
-            defer {
-                DispatchQueue.main.async {
-                    print("会员到期\(self.expireDate.readableDate())")
-                    print("会员状态\(self.isPro)")
-                    completion?(self.isPro)
-                }
-            }
-            if let code = statusCode {
-                if code == ReceiptStatus.noRecipt.rawValue {
-                    self.expireDate = Date.longlongAgo()
-                    return
-                }
-            }
-            guard let products = products else {
-                return
-            }
-            print("products: \(products)")
-            let proIdentifier = [premiumForeverProductID,premiumYearlyProductID,premiumMonthlyProductID]
-            self.expireDate = proIdentifier.map{ products[$0] ?? Date(timeIntervalSince1970: 0) }.max() ?? Date(timeIntervalSince1970: 0)
-        }
+//        IAP.validateReceipt(itunesSecret) { (statusCode, products, json) in
+//            defer {
+//                DispatchQueue.main.async {
+//                    print("会员到期\(self.expireDate.readableDate())")
+//                    print("会员状态\(self.isPro)")
+//                    completion?(self.isPro)
+//                }
+//            }
+//            if let code = statusCode {
+//                if code == ReceiptStatus.noRecipt.rawValue {
+//                    self.expireDate = Date.longlongAgo()
+//                    return
+//                }
+//            }
+//            guard let products = products else {
+//                return
+//            }
+//            print("products: \(products)")
+//            let proIdentifier = [premiumForeverProductID,premiumYearlyProductID,premiumMonthlyProductID]
+//            self.expireDate = proIdentifier.map{ products[$0] ?? Date(timeIntervalSince1970: 0) }.max() ?? Date(timeIntervalSince1970: 0)
+//        }
     }
 }

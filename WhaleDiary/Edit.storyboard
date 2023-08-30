@@ -14,7 +14,7 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="CPR-Rc-22a" customClass="TextViewController" customModule="WhaleDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eCS-3y-9qx">
-                        <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="640"/>
+                        <rect key="frame" x="0.0" y="0.0" width="188" height="640"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lId-Dt-n2r" customClass="TextView" customModule="WhaleDiary" customModuleProvider="target">
@@ -236,6 +236,7 @@
                         <outlet property="redoButton" destination="iD8-Ca-y3g" id="tnp-Ab-WuV"/>
                         <outlet property="scrollView" destination="DJa-dk-TN5" id="R3r-3r-vlH"/>
                         <outlet property="seperator" destination="IUw-9H-Oec" id="w57-yH-XMB"/>
+                        <outlet property="themBtn" destination="6kY-KC-W7k" id="8D3-7h-Jgq"/>
                         <outlet property="undoButton" destination="pfe-pR-4PB" id="G5q-Ic-kkr"/>
                     </connections>
                 </viewController>

@@ -33,6 +33,10 @@ extension NotificationCenter {
 											   object: object)
 		
 	}
+    
+    class func addObserver(forName name:NotificationName, object: Any? = nil, queue:OperationQueue = .main, usingBlock: @escaping (Notification)->Void ){
+        NotificationCenter.default.addObserver(forName: .customName(name: name), object: object, queue: queue, using: usingBlock)
+    }
 
 	class func addObserver(observer: Any, selector: Selector, name: Notification.Name, object: Any? = nil) {
 
@@ -60,5 +64,8 @@ enum NotificationName: String {
 
 	// 用户退出登录
 	case logout
+    
+    //本地文件刷新完成
+    case localFileLoadCompleted
 
 }

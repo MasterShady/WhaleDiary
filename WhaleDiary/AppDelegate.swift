@@ -7,7 +7,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
-import CYLTabBarController
+//import CYLTabBarController
 
 @main
 
@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         _ = DiaryTool.shared
+        UIView.initializeOnceMethod()
+        initialFolders()
         setup()
         MDURLProtocol.startRegister()
         
@@ -33,12 +35,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func initialFolders() {
+        try? FileManager.default.createDirectory(atPath: externalPath, withIntermediateDirectories: true, attributes: nil)
+        try? FileManager.default.removeItem(atPath: tempPath)
+        try? FileManager.default.createDirectory(atPath: tempPath, withIntermediateDirectories: true, attributes: nil)
+    }
 
     
     func setup() {
         let navigationBar = UINavigationBar.appearance()
         navigationBar.isTranslucent = false
-        //navigationBar.setTintColor(.navTint)
         
         
         Configure.shared.setup()
@@ -81,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             value = .white
                         }
                     } else {
-                        ActivityIndicator.showError(withStatus: "Only Work on iPad OS / iOS 13")
+                        ActivityIndicator.showError(withStatus: /"Only Work on iPad OS / iOS 13")
                     }
             }
             if Configure.shared.theme.value != value {

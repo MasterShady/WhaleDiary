@@ -1,16 +1,17 @@
 PODS:
   - Alamofire (5.7.1)
-  - CYLTabBarController (1.24.2):
-    - CYLTabBarController/Core (= 1.24.2)
-  - CYLTabBarController/Core (1.24.2)
   - EmptyDataSet-Swift (5.0.0)
   - EZSwiftExtensions (2.0)
   - GCDWebServer/Core (3.5.4)
   - GCDWebServer/WebUploader (3.5.4):
     - GCDWebServer/Core
+  - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.3.0)
   - JXPhotoBrowser (3.1.3)
   - JXSegmentedView (1.3.0)
+  - KDCalendar (1.8.9):
+    - KDCalendar/EventManager (= 1.8.9)
+  - KDCalendar/EventManager (1.8.9)
   - Kingfisher (7.8.1)
   - libwebp (1.3.1):
     - libwebp/demux (= 1.3.1)
@@ -45,13 +46,14 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - CYLTabBarController (~> 1.24.0)
   - EmptyDataSet-Swift (~> 5.0.0)
   - EZSwiftExtensions
   - GCDWebServer/WebUploader (~> 3.0)
+  - HandyJSON
   - IQKeyboardManagerSwift (= 6.3.0)
   - JXPhotoBrowser (~> 3.0)
   - JXSegmentedView (~> 1.3.0)
+  - KDCalendar (~> 1.8.9)
   - Kingfisher
   - LookinServer
   - MJRefresh
@@ -65,13 +67,14 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - CYLTabBarController
     - EmptyDataSet-Swift
     - EZSwiftExtensions
     - GCDWebServer
+    - HandyJSON
     - IQKeyboardManagerSwift
     - JXPhotoBrowser
     - JXSegmentedView
+    - KDCalendar
     - Kingfisher
     - libwebp
     - LookinServer
@@ -94,13 +97,14 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
-  CYLTabBarController: e7440ad0992edfb8ac14a6c793f43aa636c5cba5
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   EZSwiftExtensions: f73648a591e529a1dbd83c22b19fd3e57df6fb7d
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
   JXPhotoBrowser: d32e94e1226d43bf5ed83164e3f5b651fed625e0
   JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
+  KDCalendar: a587bc486b992d82ef94bd04001fce9baf45e518
   Kingfisher: 63f677311d36a3473f6b978584f8a3845d023dc5
   libwebp: 33dc822fbbf4503668d09f7885bbfedc76c45e96
   LookinServer: 4ce0469b066871525611d009d8d16a7a50c23491
@@ -113,6 +117,6 @@ SPEC CHECKSUMS:
   YYKit: 9ac092a14e3d5af709b707479bdb76b96a62fb41
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: fcd9ea1de8f1a453c5d4c2a2ff6129f60878c2d7
+PODFILE CHECKSUM: d43e5afdf25b53e24f12fbfeeb6806c1960e985a
 
 COCOAPODS: 1.12.1

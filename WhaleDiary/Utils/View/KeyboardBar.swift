@@ -135,7 +135,7 @@ class KeyboardBar: UIView {
         guard let textView = self.textView, let vc = textView.t_viewController else { return }
 
         let pos = sender.superview!.convert(sender.center, to: sender.window)
-        let menu = MenuView(items: ["PickFromPhotos","PickFromCamera"].map{($0,false)},
+        let menu = MenuView(items: ["PickFromPhotos".localizations,"PickFromCamera".localizations].map{($0,false)},
                  postion: CGPoint(x: pos.x - 20, y: pos.y - 110)) { [weak self] (index) in
                     if index == 0 {
                         self?.imagePicker = ImagePicker(viewController: vc){ self?.didPickImage($0) }

@@ -123,11 +123,22 @@ class ColorCenter {
     }
 }
 
+
+
+extension UITabBar{
+    func updateAppearance(_ update:(UITabBarAppearance)->()){
+        let appearance = self.standardAppearance
+        update(appearance)
+        if #available(iOS 15.0, *) {
+            self.scrollEdgeAppearance = appearance
+        } else {
+        
+        }        
+    }
+}
+
 extension UINavigationBar {
-    
-    
-    
-    
+
     func setTitleColor(_ color: ThemeColorType) {
         _ = ColorCenter.shared.colorVariable(with: color).asObservable().take(until: rx.deallocated).subscribe(onNext: { [unowned self](color) in
             updateAppearance {

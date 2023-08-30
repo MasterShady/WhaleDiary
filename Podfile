@@ -16,13 +16,16 @@ target 'WhaleDiary' do
   pod 'LookinServer', :configurations => ['Debug']
   #pod 'ETNavBarTransparent'
   pod 'JXPhotoBrowser', '~> 3.0'
-  pod 'CYLTabBarController', '~> 1.24.0'
+  #pod 'CYLTabBarController', '~> 1.24.0'
   pod 'JXSegmentedView', '~> 1.3.0'
   pod 'IQKeyboardManagerSwift', '6.3.0'
   pod 'MJRefresh'
   pod 'EmptyDataSet-Swift', '~> 5.0.0'
   pod 'YYKit', git: 'https://github.com/SAGESSE-CN/YYKit.git'
   pod 'Toaster'
+  pod 'KDCalendar', '~> 1.8.9'
+  pod 'HandyJSON' 
+
   
 end
 

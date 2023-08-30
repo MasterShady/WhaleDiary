@@ -31,11 +31,19 @@ import UIKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.isTranslucent = false
-        //tabBar.backgroundImage = UIImage(color: .white)
-        tabBar.backgroundColor = .white
-        tabBar.tintColor = .init(hexColor: "#333333")
+//        tabBar.isTranslucent = false
+//        tabBar.tintColor = .init(hexColor: "#333333")
+//        tabBar.backgroundColor =
+//        tabBar.shadowImage = nil
+        
+       
+        tabBar.updateAppearance {
+            $0.configureWithOpaqueBackground()
+            $0.backgroundColor = .kExLightGray
+        }
+                
         self.addChilds()
+        
         
 
     }
@@ -43,7 +51,7 @@ import UIKit
         func addChilds(){
             let childs : [(String,String,BaseVC)] = [
                 ("notebook","日记",DiaryListVC()),
-                ("wind","世界",DiaryListVC()),
+                ("wind","世界",MemeVC()),
             ]
     
             for child in childs {
@@ -52,27 +60,26 @@ import UIKit
                 vc.tabBarItem.image = image.withRenderingMode(.alwaysOriginal)
                 vc.tabBarItem.selectedImage = image
                 
-                _ = ColorCenter.shared.colorVariable(with: .navBar).take(until: rx.deallocated).subscribe { [weak self, weak vc] color in
-                    guard let self = self, let vc = vc else {return}
+                _ = ColorCenter.shared.colorVariable(with: .primary).take(until: rx.deallocated).subscribe { [weak self, weak vc] color in
+                    guard let self = self else {return}
                     self.tabBar.barTintColor = color
-                    vc.tabBarItem.selectedImage = image.withTintColor(color, renderingMode: .alwaysOriginal)
-                    vc.tabBarItem.setTitleTextAttributes([
-                        .font: UIFont.boldSystemFont(ofSize: 10),
-                        .foregroundColor: color
-                    ], for: .selected)
-                    
+                    self.tabBar.updateAppearance {
+                        $0.stackedLayoutAppearance.selected.titleTextAttributes = [
+                            .font: UIFont.boldSystemFont(ofSize: 10),
+                            .foregroundColor: color
+                        ]
+                    }
                     
                 }
-                
                 vc.tabBarItem.title = child.1
-                self.tabBar.backgroundColor = .kExLightGray
-                
-                vc.tabBarItem.setTitleTextAttributes([
-                    .font: UIFont.boldSystemFont(ofSize: 10),
-                    .foregroundColor: UIColor.kTextDrakGray
-                ], for: .disabled)
-                
-                
+                tabBar.updateAppearance {
+                    $0.stackedLayoutAppearance.disabled.titleTextAttributes = [
+                        .font: UIFont.boldSystemFont(ofSize: 10),
+                        .foregroundColor: UIColor.kTextDrakGray
+                    ]
+                    
+                }
+
                 
                 
                 self.addChild(vc)

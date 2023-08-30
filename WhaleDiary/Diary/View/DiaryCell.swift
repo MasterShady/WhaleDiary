@@ -8,6 +8,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import Kingfisher
 
 class Diary{
     var date: Date!
@@ -72,15 +73,48 @@ class DiaryCell: UITableViewCell {
     var photo: UIImageView!
     var timeLabel: UILabel!
     var locationLabel: UILabel!
+    var contentLabel: UILabel!
     
-    var diary: Diary?{
+    
+    var diary: File?{
         didSet{
             guard let diary = diary else {return}
-            headerLabel.text = diary.title
-            weekLabel.text = "\(diary.date.day) \(diary.date.weekdayString)"
-            dateLabel.text = diary.date.dateString()
-            timeLabel.text = diary.date.dateString(withFormat: "hh:mm")
-            locationLabel.text = diary.location
+            diary.open{ succeed in
+                self.headerLabel.text = /diary.displayName
+                self.contentLabel.text = diary.text
+                self.weekLabel.text = "\(diary.createDate.day) \(diary.createDate.weekdayString)"
+                self.dateLabel.text = diary.createDate.dateString()
+                self.timeLabel.text = diary.createDate.dateString(withFormat: "hh:mm")
+                //self.locationLabel.text = diary.location
+                var imagePaths = diary.imagePaths
+                imagePaths.remove("/path/to/img.jpg")
+                if imagePaths.count > 0{
+                    let path = imagePaths[0]
+                    if path.hasPrefix("http"){
+                        self.photo.kf.setImage(with: URL(string: path))
+                    }else{
+                        //local
+                        let imagePath = diary.parent!.path + "/" + path
+                        self.photo.image = .init(contentsOfFile: imagePath)
+                    }
+                    self.photo.isHidden = false
+                    self.contentLabel.snp.remakeConstraints { make in
+                        make.right.equalTo(self.photo.snp.left).offset(-5)
+                        make.top.equalTo(self.headerLabel.snp.bottom).offset(5)
+                        make.left.equalTo(25)
+                        make.bottom.lessThanOrEqualTo(-30)
+                    }
+                }else{
+                    self.photo.isHidden = true
+                    self.contentLabel.snp.remakeConstraints { make in
+                        make.right.equalTo(-14)
+                        make.top.equalTo(self.headerLabel.snp.bottom).offset(5)
+                        make.left.equalTo(25)
+                        make.bottom.lessThanOrEqualTo(-30)
+                    }
+                }
+            }
+            
         }
     }
 
@@ -163,10 +197,23 @@ class DiaryCell: UITableViewCell {
         headerLabel.snp.makeConstraints { make in
             make.top.equalTo(5)
             make.left.equalTo(25)
-            make.bottom.equalTo(-30)
+            make.right.equalTo(-14)
+            //make.bottom.lessThanOrEqualTo(-30)
         }
-        headerLabel.chain.font(.systemFont(ofSize: 14)).numberOfLines(0)
+        headerLabel.chain.font(.semibold(14)).numberOfLines(0)
         headerLabel.setTextColor(.primary)
+        
+        contentLabel = UILabel()
+        bubbleView.addSubview(contentLabel)
+        contentLabel.snp.makeConstraints { make in
+            make.top.equalTo(headerLabel.snp.bottom).offset(5)
+            make.left.equalTo(25)
+            make.right.equalTo(-14)
+            make.bottom.lessThanOrEqualTo(-30)
+        }
+        contentLabel.chain.font(.systemFont(ofSize: 14)).numberOfLines(0)
+        contentLabel.setTextColor(.primary)
+        
         
         timeLabel = UILabel()
         bubbleView.addSubview(timeLabel)
@@ -190,10 +237,11 @@ class DiaryCell: UITableViewCell {
         photo = UIImageView()
         bubbleView.addSubview(photo)
         photo.snp.makeConstraints { make in
-            make.top.equalTo(5)
+            make.top.equalTo(contentLabel)
             make.bottom.right.equalTo(-5)
+            make.width.height.equalTo(120)
         }
-        photo.backgroundColor = .random()
+        photo.contentMode = .scaleAspectFit
         
         
         _ = Observable.combineLatest(ColorCenter.shared.colorVariable(with: .primary), ColorCenter.shared.colorVariable(with: .background)).take(until: rx.deallocated).subscribe { _ in

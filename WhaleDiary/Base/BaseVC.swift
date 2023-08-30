@@ -30,7 +30,7 @@ class BaseVC : UIViewController{
     }
     
     override func viewDidLoad() {
-        edgesForExtendedLayout = .all
+        edgesForExtendedLayout = []
         view.setBackgroundColor(.background)
         navBar?.setTintColor(.navTint)
         navBar?.setBackgroundColor(.navBar)

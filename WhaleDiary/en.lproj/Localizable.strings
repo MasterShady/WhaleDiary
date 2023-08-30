@@ -1,0 +1,216 @@
+/* 
+  Localizable.strings
+  WhaleDiary
+
+  Created by 刘思源 on 2023/8/30.
+  
+*/
+"Documents"="Documents";
+
+"Cloud"="iCloud";
+"Local"="Local";
+"External"="Files From Other App";
+"ExternalEmpty"="Pick Files From Other App";
+"AddLocation"="Add Locations";
+"AddLocationDetail"="From [Files]";
+"MoveTo"="Move To";
+"Search"="Search";
+
+"ImportFile"="Copy to Local";
+"OpenInPlace"="Open In Place";
+
+"SortOptions"="Sort Options";
+"SortByName"="Sort By Name";
+"SortByType"="Sort By Type";
+"SortByModifyDate"="Sort By Modify Date";
+
+"EmptyFolder"="There folder is empty";
+"EmptyInbox"="Files from other app will show here\n you can import files by click the top-right button";
+
+"Today"="Today";
+"Yesterday"="Yesterday";
+"Children"="Items";
+"Empty"="Empty";
+"M-d"="MM/dd";
+"yyyy-M-d"="yyyy/MM/dd";
+
+"CreateTips"="Create note or folder";
+"RenameTips"="Rename file";
+"CreateImageTips"="Copy image to local, name the image please";
+"CreateImage"="Create Image";
+"CreateNote"="Create Note";
+"CreateFolder"="Create Folder";
+"MultipleSelect"="Multiple Select";
+"SelectAll"="Select All";
+
+"Delete"="Delete";
+"Rename"="Rename";
+"Move"="Move";
+"Send"="Send To";
+"SelectFolderToMove"="Select a destination folder";
+
+"Untitled"="Untitled";
+"UntitledFolder"="Untitled Folder";
+
+"Preview"="Preview";
+"Undo"="Undo";
+"Redo"="Redo";
+"Characters"="Characters";
+
+"ImageUploadTips"="Choose the reference method of image";
+"ImageStorageTips"="You can save your method of inserting images in [Settings]";
+"FileOpenTips"="You can custom open file mode(edit/preview) in [Settings]";
+"AutoSaveFailedTips"="Can save to file now, file content have been copied to pasteboard.";
+
+"PDF"="PDF";
+"WebPage"="HTML";
+"Image"="PNG";
+"Markdown"="Export as Text";
+"CopiedAddress"="Copied Address";
+
+"Settings"="Settings";
+"Appearance"="Appearance";
+"FileSharing"="File Sharing";
+"ArrangeKeyboardBar"="Arrange Keyboard Bar";
+"AssistKeyboard"="Enable Keyboard Bar";
+"ImpactFeedback"="Impact Feedback";
+"ShowExtensionName"="Show File's Extension";
+"SplitOptions"="Split Options";
+"ImageStorage"="Image Storage";
+"NightMode"="Dark Mode Options";
+"DarkAppIcon"="Dark App Icon";
+"FileOpenOption"="File Open Mode";
+"Theme"="Theme";
+"Contact"="Contact us";
+"RateIt"="Rate it";
+"Style"="Markdown Style";
+"CSS"="Custom Style";
+"FontSize"="Font Size";
+"ContentInset"="Content Inset";
+"CodeStyle"="Code Highlight";
+"AutomaticSplit"="Automatic Split";
+"AutoHideNavigationBar"="Auto Hide Navigation Bar";
+"TOC"="TOC";
+
+"FileOpenOptionEdit"="Edit";
+"FileOpenOptionPreview"="Preview";
+
+"ImageStorageLocal"="Local Reference";
+"ImageStorageRemote"="Upload Image";
+"ImageStorageAsk"="Ask Each Time";
+
+"FollowSystem"="Follow System";
+"KeepDarkMode"="Always Dark";
+"DisableDarkMode"="Always Light";
+
+"InvalidStyleURL"="Invalid Style URL";
+"InvalidStyleName"="Invalid Style Name";
+"DumplicatedName"="Dumplicated Style Name";
+"StyleName"="Style Name";
+"StyleURL"="CSS URL";
+"Download"="Download";
+
+"ServerLoading"="Starting...";
+"ServerStarted"="Server Started!\nOpen the URL in your computer browser:";
+"ServerNotRunning"="Server Not Running";
+"Log"="Log:";
+
+"ContactMessage"="If you have any suggestions or questions about this app, feel free to tell me please.";
+"Email"="Email";
+
+"OK"="OK";
+"Close"="Close";
+"Cancel"="Cancel";
+"Upgrade"="Upgrade";
+
+"DeleteMessage"="Sure you want to delete the selected file(s)? This action cannot be undone!";
+"ClearMessage"="Sure you want to clear all images? This action cannot be undone!";
+"CanNotAccesseThisFile"="Can Not Accesse This File";
+"CanNotPreviewThisFile"="Can Not Preview This File";
+"CanNotOperateThisFile"="Can Not Operate This File";
+"NoEditingFile"="No document being edited";
+"FileNameError"="Invalid file name";
+"FileNamePlaceHolder"="Name may NOT contains (./*~)";
+"ConnectWifiTips"="Connect to Wi-Fi first please!";
+"UnzipFailed"="Unzip Failed";
+
+"InsertHref"="Insert href";
+
+"Open"="Open it";
+"Ignore"="Ignore";
+"ReceivedNewFile"="Received New File:";
+
+"Error"="Error";
+
+"Header"="Header";
+"Header1"="Header 1";
+"Header2"="Header 2";
+"Header3"="Header 3";
+"Header4"="Header 4";
+"StrongText"="Strong text";
+"EmphasizedText"="Emphasized text";
+"Blockquote"="Blockquote";
+"Delection"="Delection";
+"EnterCode"="Enter code here";
+"EnterLink"="Link description";
+"Alt"="Alt";
+
+"Clear"="Clear";
+"Recent"="Recents";
+"PickFromPhotos"="Open Photos";
+"PickFromCamera"="Open Camera";
+"Completed"="Completed";
+"Uncompleted"="Uncompleted";
+
+"CameraError"="Can Not Access Your Camera";
+"PhotoError"="Can Not Access Your Photos";
+"EnableCameraTips"="Tap \"settings\" icon, find and tap \"privacy\", tap \"Camera\", find \"Markdown\" and enable it.";
+"EnablePhotoTips"="Tap \"settings\" icon, find and tap \"privacy\", tap \"Photos\", find \"Markdown\" and enable it.";
+
+"ThemeWhite"="White";
+"ThemeBlack"="Dark";
+"ThemeBlue"="Blue";
+"ThemeRed"="Red";
+"ThemePurple"="Purple";
+"ThemePink"="Pink";
+"ThemeGreen"="Green";
+
+"PremiumOnly"="Upgrade to Pro to Unlock This Feature";
+"PremiumTips"="Every new user has 3-days free trial";
+"SubscribeNow"="View detail";
+"Expire"="Expires At";
+
+"Premium"="Premium";
+"Terms"="Terms Of Use";
+"Privacy"="Privacy Policy";
+
+"SubscribeMonthly"="Monthly Pro: $0.99";
+"SubscribeYearly"="Yearly Pro: $4.99";
+"LifetimePremium"="Lifetime Pro: $9.99";
+
+"PurchaseMonthly"="Continue";
+"PurchaseYearly"="Continue";
+"PurchaseForever"="Continue";
+"Subscribed"="Subscribed";
+
+"MonthlyTips"="Subscription can be canceled at any time";
+"YearlyTips"="Try 1 week for free, then $4.99/year";
+"ForeverTips"="Unlock all the features forever";
+
+"SubscriptionTitle"="Upgrade to Markdown Pro to unlock all features:\n• 📤Export markdown as PDF,HTML,JPG\n• 💻Share files with PC via Wi-Fi\n• ☁️Sync files between all your devices\n• 🛍️More features in future versions";
+
+"SubscribeTips"="[Pro Subscription]\n\n• The duration of every period of Monthly Subscription is 1 month, The duration of every period of Yearly Subscription is 1 year\n\n• Payment will be charged to iTunes Account at confirmation of purchase\n\n• Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period\n\n• Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal\n\n• Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase\n\n• Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable\n\n• The Price of monthly subscription of every period is $0.99 USD, The Price of yearly subscription of every period is $4.99 USD";
+"Restore"="Restore";
+
+"SubscribeFailed"="Purchase Failed";
+"SubscribeSuccess"="Purchase Success";
+"RestoreFailed"="No Valid Purchases Found";
+"RestoreSuccess"="Restore Purchases Success";
+
+"Instructions"="ReadMe";
+"Syntax"="Syntax";
+
+"Tips"="Tips";
+"GotIt"="Got it!";
+"Restart"="Restart APP";
+"SlideTips"="Slide the edit view left can quick preview your note";

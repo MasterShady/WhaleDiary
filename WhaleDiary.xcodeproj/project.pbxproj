@@ -14,9 +14,7 @@
 		EB006ECE2A9C86F60091D50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB006ECD2A9C86F60091D50B /* Assets.xcassets */; };
 		EB006ED12A9C86F60091D50B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB006ECF2A9C86F60091D50B /* LaunchScreen.storyboard */; };
 		EB006EE02A9C88310091D50B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006ED92A9C88310091D50B /* Constants.swift */; };
-		EB006EE22A9C88310091D50B /* WhaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006EDB2A9C88310091D50B /* WhaleButton.swift */; };
 		EB006EE32A9C88310091D50B /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006EDC2A9C88310091D50B /* BaseVC.swift */; };
-		EB006EE42A9C88310091D50B /* WhaleTabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006EDD2A9C88310091D50B /* WhaleTabbarVC.swift */; };
 		EB006EE52A9C88310091D50B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006EDE2A9C88310091D50B /* WebViewController.swift */; };
 		EB006EE62A9C88310091D50B /* NavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006EDF2A9C88310091D50B /* NavVC.swift */; };
 		EB006F322A9C88370091D50B /* AETextFieldAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006EEB2A9C88360091D50B /* AETextFieldAlertView.swift */; };
@@ -84,7 +82,6 @@
 		EB006F872A9C89350091D50B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006F7B2A9C89350091D50B /* Constant.swift */; };
 		EB006F882A9C89350091D50B /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006F7C2A9C89350091D50B /* Configure.swift */; };
 		EB006F892A9C89350091D50B /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006F7D2A9C89350091D50B /* Localization.swift */; };
-		EB006F8A2A9C89350091D50B /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006F7E2A9C89350091D50B /* IAPHelper.swift */; };
 		EB006F8B2A9C89350091D50B /* MDURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = EB006F7F2A9C89350091D50B /* MDURLProtocol.m */; };
 		EB006F8C2A9C89350091D50B /* NSURLProtocol+WKWebVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = EB006F802A9C89350091D50B /* NSURLProtocol+WKWebVIew.m */; };
 		EB006F8D2A9C89350091D50B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB006F812A9C89350091D50B /* ActivityIndicator.swift */; };
@@ -122,6 +119,11 @@
 		EB362CA72A9DEA770012D038 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB362CA12A9DEA770012D038 /* TextView.swift */; };
 		EB362CA82A9DEA770012D038 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB362CA22A9DEA770012D038 /* MenuView.swift */; };
 		EB362CA92A9DEA770012D038 /* KeyboardBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB362CA32A9DEA770012D038 /* KeyboardBar.swift */; };
+		EB362CAC2A9EEFFD0012D038 /* 示例文档.md in Resources */ = {isa = PBXBuildFile; fileRef = EB362CAA2A9EEFFD0012D038 /* 示例文档.md */; };
+		EB362CAD2A9EEFFD0012D038 /* 使用教程.md in Resources */ = {isa = PBXBuildFile; fileRef = EB362CAB2A9EEFFD0012D038 /* 使用教程.md */; };
+		EB362CB62A9EF1970012D038 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB362CB82A9EF1970012D038 /* Localizable.strings */; };
+		EB362CC22A9F3D500012D038 /* MemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB362CC12A9F3D500012D038 /* MemeVC.swift */; };
+		EB362CC42A9F42B10012D038 /* Meme.json in Resources */ = {isa = PBXBuildFile; fileRef = EB362CC32A9F42B10012D038 /* Meme.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,9 +140,7 @@
 		EB006ED02A9C86F60091D50B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB006ED22A9C86F60091D50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB006ED92A9C88310091D50B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		EB006EDB2A9C88310091D50B /* WhaleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhaleButton.swift; sourceTree = "<group>"; };
 		EB006EDC2A9C88310091D50B /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
-		EB006EDD2A9C88310091D50B /* WhaleTabbarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhaleTabbarVC.swift; sourceTree = "<group>"; };
 		EB006EDE2A9C88310091D50B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EB006EDF2A9C88310091D50B /* NavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
 		EB006EEB2A9C88360091D50B /* AETextFieldAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AETextFieldAlertView.swift; sourceTree = "<group>"; };
@@ -216,7 +216,6 @@
 		EB006F7B2A9C89350091D50B /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		EB006F7C2A9C89350091D50B /* Configure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
 		EB006F7D2A9C89350091D50B /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
-		EB006F7E2A9C89350091D50B /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		EB006F7F2A9C89350091D50B /* MDURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDURLProtocol.m; sourceTree = "<group>"; };
 		EB006F802A9C89350091D50B /* NSURLProtocol+WKWebVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WKWebVIew.m"; sourceTree = "<group>"; };
 		EB006F812A9C89350091D50B /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -268,6 +267,14 @@
 		EB362CA12A9DEA770012D038 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		EB362CA22A9DEA770012D038 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		EB362CA32A9DEA770012D038 /* KeyboardBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBar.swift; sourceTree = "<group>"; };
+		EB362CAA2A9EEFFD0012D038 /* 示例文档.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "示例文档.md"; sourceTree = "<group>"; };
+		EB362CAB2A9EEFFD0012D038 /* 使用教程.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "使用教程.md"; sourceTree = "<group>"; };
+		EB362CB72A9EF1970012D038 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB362CBE2A9EF2AF0012D038 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		EB362CBF2A9EF2AF0012D038 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		EB362CC02A9EF2AF0012D038 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EB362CC12A9F3D500012D038 /* MemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeVC.swift; sourceTree = "<group>"; };
+		EB362CC32A9F42B10012D038 /* Meme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Meme.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +330,8 @@
 		EB006EC32A9C86F50091D50B /* WhaleDiary */ = {
 			isa = PBXGroup;
 			children = (
+				EB362CAB2A9EEFFD0012D038 /* 使用教程.md */,
+				EB362CAA2A9EEFFD0012D038 /* 示例文档.md */,
 				EB362C742A9DE9840012D038 /* Core */,
 				EB006F922A9C986C0091D50B /* Support */,
 				EB006F6D2A9C89020091D50B /* Model */,
@@ -347,11 +356,10 @@
 				EB362C622A9D8C5A0012D038 /* BaseTableViewCell.swift */,
 				EB006F952A9CA1C80091D50B /* TabbarVC.swift */,
 				EB006ED92A9C88310091D50B /* Constants.swift */,
-				EB006EDB2A9C88310091D50B /* WhaleButton.swift */,
 				EB006EDC2A9C88310091D50B /* BaseVC.swift */,
-				EB006EDD2A9C88310091D50B /* WhaleTabbarVC.swift */,
 				EB006EDE2A9C88310091D50B /* WebViewController.swift */,
 				EB006EDF2A9C88310091D50B /* NavVC.swift */,
+				EB362CB82A9EF1970012D038 /* Localizable.strings */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -535,6 +543,8 @@
 		EB006F6A2A9C88700091D50B /* World */ = {
 			isa = PBXGroup;
 			children = (
+				EB362CC12A9F3D500012D038 /* MemeVC.swift */,
+				EB362CC32A9F42B10012D038 /* Meme.json */,
 			);
 			path = World;
 			sourceTree = "<group>";
@@ -558,7 +568,6 @@
 				EB006F7B2A9C89350091D50B /* Constant.swift */,
 				EB006F7C2A9C89350091D50B /* Configure.swift */,
 				EB006F7D2A9C89350091D50B /* Localization.swift */,
-				EB006F7E2A9C89350091D50B /* IAPHelper.swift */,
 				EB006F7F2A9C89350091D50B /* MDURLProtocol.m */,
 				EB006F802A9C89350091D50B /* NSURLProtocol+WKWebVIew.m */,
 				EB006F812A9C89350091D50B /* ActivityIndicator.swift */,
@@ -691,6 +700,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = EB006EB82A9C86F50091D50B;
 			productRefGroup = EB006EC22A9C86F50091D50B /* Products */;
@@ -708,9 +718,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB006ED12A9C86F60091D50B /* LaunchScreen.storyboard in Resources */,
+				EB362CAD2A9EEFFD0012D038 /* 使用教程.md in Resources */,
 				EB362C6B2A9DDCE40012D038 /* Edit.storyboard in Resources */,
 				EB006F942A9C98740091D50B /* Resources.zip in Resources */,
+				EB362CAC2A9EEFFD0012D038 /* 示例文档.md in Resources */,
+				EB362CB62A9EF1970012D038 /* Localizable.strings in Resources */,
 				EB006ECE2A9C86F60091D50B /* Assets.xcassets in Resources */,
+				EB362CC42A9F42B10012D038 /* Meme.json in Resources */,
 				EB006ECC2A9C86F50091D50B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,6 +796,7 @@
 				EB006F962A9CA1C80091D50B /* TabbarVC.swift in Sources */,
 				EB362C662A9DBBC30012D038 /* DiaryCell.swift in Sources */,
 				EB006F332A9C88370091D50B /* AEAlertAction.swift in Sources */,
+				EB362CC22A9F3D500012D038 /* MemeVC.swift in Sources */,
 				EB006F982A9CB3E10091D50B /* SettingsVC.swift in Sources */,
 				EB362C992A9DE9840012D038 /* hoedown_html_patch.c in Sources */,
 				EB006F3D2A9C88370091D50B /* UserDefault++.swift in Sources */,
@@ -825,10 +840,8 @@
 				EB006F492A9C88370091D50B /* ScrollView++.swift in Sources */,
 				EB006F422A9C88370091D50B /* FileManagerExtension.swift in Sources */,
 				EB362C712A9DE95D0012D038 /* PreviewViewController.swift in Sources */,
-				EB006EE42A9C88310091D50B /* WhaleTabbarVC.swift in Sources */,
 				EB362C692A9DDABC0012D038 /* DiaryTool.swift in Sources */,
 				EB006F892A9C89350091D50B /* Localization.swift in Sources */,
-				EB006F8A2A9C89350091D50B /* IAPHelper.swift in Sources */,
 				EB006F782A9C89020091D50B /* ExportActivity.swift in Sources */,
 				EB006F792A9C89020091D50B /* ServerInfo.swift in Sources */,
 				EB006F592A9C88370091D50B /* UIView+Chain.swift in Sources */,
@@ -845,7 +858,6 @@
 				EB362CA62A9DEA770012D038 /* Seperator.swift in Sources */,
 				EB362C9C2A9DE9840012D038 /* HighlightManager.swift in Sources */,
 				EB006F562A9C88370091D50B /* UILabel+Chain.swift in Sources */,
-				EB006EE22A9C88310091D50B /* WhaleButton.swift in Sources */,
 				EB006F472A9C88370091D50B /* Image++.swift in Sources */,
 				EB006EE02A9C88310091D50B /* Constants.swift in Sources */,
 				EB362C952A9DE9840012D038 /* stack.c in Sources */,
@@ -883,6 +895,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EB006ECB2A9C86F50091D50B /* Base */,
+				EB362CBE2A9EF2AF0012D038 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -891,9 +904,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				EB006ED02A9C86F60091D50B /* Base */,
+				EB362CBF2A9EF2AF0012D038 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
+		};
+		EB362CB82A9EF1970012D038 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB362CB72A9EF1970012D038 /* en */,
+				EB362CC02A9EF2AF0012D038 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			path = WhaleDiary;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
@@ -902,6 +926,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -948,7 +973,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -962,6 +987,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1002,7 +1028,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

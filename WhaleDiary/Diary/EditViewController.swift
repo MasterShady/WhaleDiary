@@ -25,6 +25,8 @@ class EditViewController: UIViewController, UIScrollViewDelegate,UIPopoverPresen
     @IBOutlet weak var bottomBar: UIView!
     @IBOutlet weak var seperator: UIView!
 
+    @IBOutlet weak var themBtn: UIButton!
+    
     @IBOutlet weak var bottomSpace: NSLayoutConstraint!
     @IBOutlet var editViewWidth: NSLayoutConstraint!
 
@@ -43,7 +45,9 @@ class EditViewController: UIViewController, UIScrollViewDelegate,UIPopoverPresen
     
     var file: File? {
         didSet {
-            title = file?.displayName ?? file?.name
+            if let file = file{
+                title = file.displayName.localizations
+            }
             setup()
         }
     }
@@ -115,9 +119,11 @@ class EditViewController: UIViewController, UIScrollViewDelegate,UIPopoverPresen
         emptyImageView.tintImage = emptyImageView.image
         emptyImageView.setTintColor(.secondary)
         emptyLabel.setTextColor(.secondary)
-        emptyLabel.text = "NoEditingFile"
+        emptyLabel.text = /"NoEditingFile"
         emptyView.setBackgroundColor(.background)
         view.setBackgroundColor(.background)
+        
+        themBtn.isHidden = true
         
         addNotificationObserver(UIDevice.orientationDidChangeNotification.rawValue, selector: #selector(deviceOrientationDidChange))
         addNotificationObserver(UIResponder.keyboardWillChangeFrameNotification.rawValue, selector: #selector(keyboardHeightWillChange(_:)))
@@ -154,8 +160,8 @@ class EditViewController: UIViewController, UIScrollViewDelegate,UIPopoverPresen
                 
             } else {
                 let exception = NSException(name: NSExceptionName(rawValue: "Auto Save Failed!") , reason: "Auto Save Failed!", userInfo: nil)
-                self.showAlert(title: "Auto Save Failed!", message: "AutoSaveFailedTips", actionTitles: [
-                    "Restart"]) { index in
+                self.showAlert(title: /"Auto Save Failed!", message: /"AutoSaveFailedTips", actionTitles: [
+                    "Restart".toString]) { index in
                         exit(0)
                 }
             }
@@ -323,7 +329,7 @@ class EditViewController: UIViewController, UIScrollViewDelegate,UIPopoverPresen
             scrollView.setContentOffset(CGPoint(), animated: true)
         }
         if !Configure.shared.showedTips.contains("1") {
-            showAlert(title: "Tips", message: "SlideTips", actionTitles: ["GotIt"])
+            showAlert(title: /"Tips", message: /"SlideTips", actionTitles: ["GotIt".localizations])
             Configure.shared.showedTips.append("1")
         }
     }
