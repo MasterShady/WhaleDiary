@@ -24,7 +24,8 @@ target 'WhaleDiary' do
   pod 'YYKit', git: 'https://github.com/SAGESSE-CN/YYKit.git'
   pod 'Toaster'
   pod 'KDCalendar', '~> 1.8.9'
-  pod 'HandyJSON' 
+  pod 'HandyJSON'
+  pod 'MJRefresh'
 
   
 end

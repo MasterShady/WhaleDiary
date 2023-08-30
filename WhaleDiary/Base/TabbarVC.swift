@@ -51,7 +51,7 @@ import UIKit
         func addChilds(){
             let childs : [(String,String,BaseVC)] = [
                 ("notebook","日记",DiaryListVC()),
-                ("wind","世界",MemeVC()),
+                ("wind","迷因",MemeVC()),
             ]
     
             for child in childs {

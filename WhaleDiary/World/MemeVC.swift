@@ -21,7 +21,7 @@ class Meme: HandyJSON{
         let path = Bundle.main.path(forScaledResource: "Meme.json", ofType: nil)!
         let data =  try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         if let json = try! JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as? NSArray {
-            return [Meme].deserialize(from: json)!.compactMap({$0})
+            return [Meme].deserialize(from: json)!.compactMap({$0}).sorted(by: \.date).reversed()
         }
         return .init()
     }
@@ -87,14 +87,26 @@ class MemeCell : UICollectionViewCell{
     
     var meme: Meme?{
         didSet{
-            self.nameLabel.text = meme?.fakeName
-            self.memeLabel.text = meme?.meme
-            self.backgroundColor = meme?.color
+            guard let meme = meme else { return }
+            self.nameLabel.text = meme.fakeName
+            self.memeLabel.text = meme.meme
+            self.backgroundColor = meme.color
+            let dayDiff = meme.date.getDateInterval(date: Date()).day!
+            if dayDiff == 0{
+                self.dateLabel.text = "今天"
+            }
+            else if dayDiff < 7{
+                self.dateLabel.text = "\(dayDiff) 天前"
+            }else{
+                self.dateLabel.text = meme.date.dateString()
+            }
+            
         }
     }
     
     var nameLabel: UILabel!
     var memeLabel: UILabel!
+    var dateLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -107,6 +119,7 @@ class MemeCell : UICollectionViewCell{
     
     func configSubViews() {
         nameLabel = UILabel()
+        self.chain.clipsToBounds(true).corner(radius: 5)
         self.contentView.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { make in
             make.top.equalTo(10)
@@ -124,6 +137,14 @@ class MemeCell : UICollectionViewCell{
         }
         memeLabel.chain.text(color: .white).font(.systemFont(ofSize: 14)).numberOfLines(0)
         
+        dateLabel = UILabel()
+        contentView.addSubview(dateLabel)
+        
+        dateLabel.snp.makeConstraints { make in
+            make.bottom.equalTo(-5)
+            make.left.equalTo(memeLabel)
+        }
+        dateLabel.chain.text(color: .white).font(.systemFont(ofSize: 12))
     }
 }
 
@@ -136,6 +157,7 @@ class MemeVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "迷因"
         view.backgroundColor = .white
         
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -169,7 +191,8 @@ class MemeVC: BaseVC, UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        UIPasteboard.general.string = memes[indexPath.row].meme
+        ActivityIndicator.showMessage(message: "已复制到剪贴板。")
     }
 
 }

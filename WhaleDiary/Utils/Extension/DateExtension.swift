@@ -91,6 +91,10 @@ public extension Date {
         return self.year == date.year && self.month == date.month
     }
     
+    func isSameWeak(_ date: Date) -> Bool{
+        return self.year == date.year && self.weekOfYear == date.weekOfYear
+    }
+    
     // --:--
     func dateString(withFormat dateFormatString: String = "yyyy-MM-dd") -> String {
         if isZeroDate() {

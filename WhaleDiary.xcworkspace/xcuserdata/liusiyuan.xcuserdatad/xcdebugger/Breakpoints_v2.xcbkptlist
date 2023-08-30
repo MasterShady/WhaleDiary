@@ -14,10 +14,10 @@
             filePath = "WhaleDiary/Model/File.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
-            landmarkName = "createFile(name:contents:type:)"
-            landmarkType = "7">
+            startingLineNumber = "310"
+            endingLineNumber = "310"
+            landmarkName = "File"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -85,40 +85,88 @@
             filePath = "WhaleDiary/Diary/EditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
-            landmarkName = "showFileList()"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "fileLoadFinished(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FB89057-7050-4C3B-AF38-7F370E00E969"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhaleDiary/Utils/MDUtils/Configure.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "upgrade()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C863B6E-625B-4C24-A62F-7485127C3437"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhaleDiary/Utils/MDUtils/MDURLProtocol.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "+canInitWithRequest:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5A9C657-B9BF-4E6A-A55B-25B82C64F0DA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhaleDiary/Model/Document.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "load(fromContents:ofType:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C6FC9779-B0CD-425C-84BC-4A25EA057823 - 604694d347dac727"
+                  uuid = "F5A9C657-B9BF-4E6A-A55B-25B82C64F0DA - e752a81c996b9587"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "WhaleDiary.EditViewController.fullscreen() -&gt; ()"
+                  symbolName = "WhaleDiary.Document.load(fromContents: Any, ofType: Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
                   moduleName = "WhaleDiary"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liusiyuan/development/DF/WhaleDiary/WhaleDiary/Diary/EditViewController.swift"
+                  urlString = "file:///Users/liusiyuan/development/DF/WhaleDiary/WhaleDiary/Model/Document.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "270"
-                  endingLineNumber = "270"
-                  offsetFromSymbolStart = "24">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "168">
                </Location>
                <Location
-                  uuid = "C6FC9779-B0CD-425C-84BC-4A25EA057823 - a6832e8d58e7ccfb"
+                  uuid = "F5A9C657-B9BF-4E6A-A55B-25B82C64F0DA - e752a81c996b9587"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "WhaleDiary.EditViewController.showFileList() -&gt; ()"
+                  symbolName = "WhaleDiary.Document.load(fromContents: Any, ofType: Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
                   moduleName = "WhaleDiary"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/liusiyuan/development/DF/WhaleDiary/WhaleDiary/Diary/EditViewController.swift"
+                  urlString = "file:///Users/liusiyuan/development/DF/WhaleDiary/WhaleDiary/Model/Document.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "270"
-                  endingLineNumber = "270"
-                  offsetFromSymbolStart = "32">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "316">
                </Location>
             </Locations>
          </BreakpointContent>
